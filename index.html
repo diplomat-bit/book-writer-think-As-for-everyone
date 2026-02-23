@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aethelgard Codex | Enterprise Epic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+    body {
+      background-color: #050a14;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* CRISP CORPORATE SERIF */
+    .font-readable { 
+      font-family: 'Georgia', serif !important; 
+      color: #1a202c !important; 
+      font-size: 13pt !important; 
+      font-weight: 400 !important;
+      line-height: 1.7 !important;
+      white-space: pre-wrap !important;
+    }
+    
+    /* EPIC CALLIGRAPHIC STYLE */
+    .epic-script {
+      font-family: 'IM Fell English', serif !important;
+      font-style: italic;
+      color: #2c5282 !important; /* Deep Corporate Blue */
+      font-size: 1.15em;
+      letter-spacing: 0.02em;
+    }
+
+    .font-ui { font-family: 'Inter', sans-serif; }
+    
+    ::selection {
+      background: #3182ce !important;
+      color: #fff !important;
+    }
+
+    .premium-container {
+      background-color: #ffffff;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      border: 1px solid #cbd5e0;
+      outline: 4px solid rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      overflow-x: hidden;
+      overflow-y: auto; /* ENABLE SCROLLING */
+      transition: all 0.3s ease;
+    }
+
+    .line-numbers {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      color: #a0aec0;
+      text-align: right;
+      padding-right: 12px;
+      user-select: none;
+      background: #f7fafc;
+      border-right: 1px solid #edf2f7;
+    }
+
+    [contenteditable] {
+      outline: none;
+      min-height: 100%;
+      padding: 0 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e0;
+      border-radius: 4px;
+      border: 2px solid #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* PRINT STYLES FOR HIGH FIDELITY EXPORT */
+    @media print {
+      body { background: white !important; overflow: visible !important; }
+      .no-print { display: none !important; }
+      .flex-1 { overflow: visible !important; height: auto !important; position: static !important; }
+      .h-screen { height: auto !important; overflow: visible !important; display: block !important; }
+      .premium-container { 
+        box-shadow: none !important; 
+        border: 1px solid #eee !important;
+        outline: none !important;
+        overflow: visible !important;
+        height: auto !important;
+      }
+      .line-numbers { display: none !important; }
+      [contenteditable] { padding: 40px !important; }
+      .font-readable { color: black !important; font-size: 12pt !important; }
+      header, footer { border: none !important; color: black !important; }
+      h1 { color: #0a2540 !important; }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
+    "@google/genai": "https://esm.sh/@google/genai@1.38.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.17?external=react",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
